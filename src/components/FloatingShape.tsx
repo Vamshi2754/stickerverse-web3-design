@@ -34,6 +34,7 @@ export default function FloatingShape({
         animate={floatAnimation}
         className={`rounded-full ${color} ${className}`}
         style={{ width: size, height: size }}
+        aria-hidden="true"
       />
     ),
     square: (
@@ -41,6 +42,7 @@ export default function FloatingShape({
         animate={floatAnimation}
         className={`rounded-xl ${color} ${className}`}
         style={{ width: size, height: size }}
+        aria-hidden="true"
       />
     ),
     triangle: (
@@ -48,6 +50,7 @@ export default function FloatingShape({
         animate={floatAnimation}
         className={`${className}`}
         style={{ width: 0, height: 0 }}
+        aria-hidden="true"
       >
         <div
           className={`${color}`}
@@ -68,6 +71,8 @@ export default function FloatingShape({
         height={size}
         viewBox="0 0 100 100"
         className={className}
+        aria-hidden="true"
+        role="presentation"
       >
         <polygon
           points="50,10 90,35 75,80 25,80 10,35"
