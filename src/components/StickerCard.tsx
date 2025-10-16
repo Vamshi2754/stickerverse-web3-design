@@ -29,11 +29,9 @@ export default function StickerCard({
         ease: [0.25, 0.46, 0.45, 0.94],
       }}
       whileHover={{
-        y: -10,
-        scale: 1.03,
-        rotate: 2,
-        boxShadow: "16px 16px 0px rgba(0, 0, 0, 0.2)",
-        transition: { duration: 0.25, ease: "easeOut" },
+        scale: 1.05,
+        boxShadow: "16px 16px 0px rgba(0, 255, 255, 0.4), 20px 20px 0px rgba(255, 0, 110, 0.2)",
+        transition: { duration: 0.3, ease: "easeOut" },
       }}
       className={`
         ${bgColor} ${borderColor}

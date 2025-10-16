@@ -1,42 +1,65 @@
 "use client";
 
 import { motion } from "framer-motion";
-import FloatingShape from "./FloatingShape";
 import { Sparkles, Zap, Rocket } from "lucide-react";
+import Image from "next/image";
 
 export default function HeroSection() {
   return (
     <section className="relative min-h-screen w-full overflow-hidden bg-gradient-to-br from-[#c7f5e8] via-[#ffd4c4] to-[#d4e7ff] texture-noise">
-      {/* Simplified Floating Shapes - Less visual noise */}
+      {/* Bold Retro Shape Illustrations */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <FloatingShape
-          type="circle"
-          color="text-[#00ffff]"
-          size={100}
-          className="absolute top-20 left-[8%] opacity-40"
-          delay={0}
-        />
-        <FloatingShape
-          type="square"
-          color="text-[#ff006e]"
-          size={80}
-          className="absolute top-40 right-[12%] opacity-30"
-          delay={0.5}
-        />
-        <FloatingShape
-          type="polygon"
-          color="text-[#00ffff]"
-          size={90}
-          className="absolute bottom-32 left-[15%] opacity-35"
-          delay={1}
-        />
-        <FloatingShape
-          type="circle"
-          color="text-[#ff006e]"
-          size={70}
-          className="absolute bottom-20 right-[20%] opacity-40"
-          delay={1.5}
-        />
+        <motion.div
+          animate={{ y: [0, -20, 0], rotate: [0, 5, 0] }}
+          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute top-20 left-[8%] w-24 h-24 sm:w-32 sm:h-32 opacity-60"
+        >
+          <Image
+            src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/project-uploads/4794464d-ee3c-4139-bb7b-8d04aae34059/generated_images/bold-retro-abstract-shape-illustration-w-cb4a4228-20251016095714.jpg"
+            alt=""
+            fill
+            className="object-contain"
+          />
+        </motion.div>
+        
+        <motion.div
+          animate={{ y: [0, -25, 0], rotate: [0, -8, 0] }}
+          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+          className="absolute top-40 right-[12%] w-20 h-20 sm:w-28 sm:h-28 opacity-50"
+        >
+          <Image
+            src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/project-uploads/4794464d-ee3c-4139-bb7b-8d04aae34059/generated_images/bold-retro-geometric-shape-illustration--242f9d8a-20251016095721.jpg"
+            alt=""
+            fill
+            className="object-contain"
+          />
+        </motion.div>
+        
+        <motion.div
+          animate={{ y: [0, -18, 0], rotate: [0, 6, 0] }}
+          transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+          className="absolute bottom-32 left-[15%] w-28 h-28 sm:w-36 sm:h-36 opacity-55"
+        >
+          <Image
+            src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/project-uploads/4794464d-ee3c-4139-bb7b-8d04aae34059/generated_images/bold-retro-abstract-shape-illustration-w-00c54b23-20251016095729.jpg"
+            alt=""
+            fill
+            className="object-contain"
+          />
+        </motion.div>
+        
+        <motion.div
+          animate={{ y: [0, -22, 0], rotate: [0, -5, 0] }}
+          transition={{ duration: 3.8, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
+          className="absolute bottom-20 right-[20%] w-20 h-20 sm:w-28 sm:h-28 opacity-50"
+        >
+          <Image
+            src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/project-uploads/4794464d-ee3c-4139-bb7b-8d04aae34059/generated_images/bold-retro-geometric-shape-illustration--1635dc41-20251016095738.jpg"
+            alt=""
+            fill
+            className="object-contain"
+          />
+        </motion.div>
       </div>
 
       {/* Geometric Doodle Patterns */}
