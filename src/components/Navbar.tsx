@@ -21,7 +21,7 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-sm border-b border-white/10">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0F1724]/95 backdrop-blur-sm border-b border-white/10">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
@@ -31,17 +31,17 @@ export default function Navbar() {
               whileTap={{ scale: 0.95 }}
               className="flex items-center gap-3 cursor-pointer"
             >
-              <div className="bg-[#00ffff] text-black p-2 rounded-lg">
+              <div className="bg-[#1E4BFF] text-white p-2 rounded-lg">
                 <Shield size={24} />
               </div>
               <div className="hidden sm:block">
                 <h1 className="text-xl font-bold text-white leading-none">Arthachain</h1>
-                <p className="text-xs text-[#00ffff] font-medium">22M+ TPS</p>
+                <p className="text-xs text-[#00C2A8] font-medium">22M+ TPS</p>
               </div>
             </motion.div>
           </Link>
 
-          {/* Desktop Navigation - Text Only */}
+          {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
             {navItems.map((item) => {
               const isActive = pathname === item.href;
@@ -52,7 +52,7 @@ export default function Navbar() {
                     className={`
                       font-medium text-base transition-all duration-200 relative
                       ${isActive 
-                        ? "text-[#00ffff]" 
+                        ? "text-[#1E4BFF]" 
                         : "text-white/90 hover:text-white"
                       }
                     `}
@@ -61,7 +61,7 @@ export default function Navbar() {
                     {isActive && (
                       <motion.div
                         layoutId="activeTab"
-                        className="absolute -bottom-1 left-0 right-0 h-0.5 bg-[#00ffff]"
+                        className="absolute -bottom-1 left-0 right-0 h-0.5 bg-[#1E4BFF]"
                       />
                     )}
                   </motion.div>
@@ -69,7 +69,7 @@ export default function Navbar() {
               );
             })}
             
-            {/* CTA Button - Minimal Style */}
+            {/* CTA Button */}
             <a 
               href="https://testnet.arthachain.online/" 
               target="_blank" 
@@ -78,7 +78,7 @@ export default function Navbar() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="ml-2 text-[#00ffff] font-semibold text-base hover:text-white transition-colors border border-[#00ffff]/30 hover:border-[#00ffff] px-4 py-2 rounded-lg"
+                className="btn-secondary text-base px-6 py-2.5"
               >
                 Launch Testnet
               </motion.button>
@@ -96,13 +96,13 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Dropdown Menu - Text Only */}
+      {/* Mobile Dropdown Menu */}
       {mobileMenuOpen && (
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
-          className="lg:hidden bg-black/98 backdrop-blur-sm border-t border-white/10"
+          className="lg:hidden bg-[#0F1724]/98 backdrop-blur-sm border-t border-white/10"
         >
           <div className="container mx-auto px-4 py-6 space-y-4">
             {navItems.map((item) => {
@@ -113,7 +113,7 @@ export default function Navbar() {
                     className={`
                       font-medium text-lg transition-colors
                       ${isActive 
-                        ? "text-[#00ffff]" 
+                        ? "text-[#1E4BFF]" 
                         : "text-white/90 hover:text-white"
                       }
                     `}
@@ -129,7 +129,7 @@ export default function Navbar() {
               rel="noopener noreferrer"
               onClick={() => setMobileMenuOpen(false)}
             >
-              <div className="text-[#00ffff] font-semibold text-lg pt-2 border-t border-white/10">
+              <div className="text-[#1E4BFF] font-semibold text-lg pt-2 border-t border-white/10">
                 Launch Testnet
               </div>
             </a>

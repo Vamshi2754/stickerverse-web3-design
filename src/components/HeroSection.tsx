@@ -6,58 +6,50 @@ import { Sparkles, Zap, Rocket } from "lucide-react";
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen w-full overflow-hidden bg-gradient-to-br from-[#c7f5e8] via-[#ffd4c4] to-[#d4e7ff] texture-noise">
-      {/* Floating Shapes - More shapes for full screen */}
+    <section className="relative min-h-screen w-full overflow-hidden bg-gradient-to-br from-[#F7F9FC] via-white to-[#F7F9FC] texture-noise">
+      {/* Floating Shapes - Limited to brand colors */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <FloatingShape
           type="circle"
-          color="text-[#00ffff]"
+          color="text-[#1E4BFF]"
           size={80}
-          className="absolute top-20 left-[10%] opacity-60"
+          className="absolute top-20 left-[10%] opacity-40"
           delay={0}
         />
         <FloatingShape
           type="square"
-          color="text-[#ff006e]"
+          color="text-[#00C2A8]"
           size={60}
-          className="absolute top-32 right-[15%] opacity-50"
+          className="absolute top-32 right-[15%] opacity-30"
           delay={0.5}
         />
         <FloatingShape
           type="polygon"
-          color="text-[#00ff7f]"
+          color="text-[#1E4BFF]"
           size={70}
-          className="absolute bottom-40 left-[20%] opacity-40"
+          className="absolute bottom-40 left-[20%] opacity-25"
           delay={1}
         />
         <FloatingShape
           type="triangle"
-          color="text-[#ffd500]"
+          color="text-[#00C2A8]"
           size={90}
-          className="absolute bottom-20 right-[25%] opacity-50"
+          className="absolute bottom-20 right-[25%] opacity-30"
           delay={1.5}
         />
         <FloatingShape
           type="circle"
-          color="text-[#a855f7]"
+          color="text-[#1E4BFF]"
           size={50}
-          className="absolute top-[60%] right-[10%] opacity-60"
+          className="absolute top-[60%] right-[10%] opacity-35"
           delay={0.8}
         />
-        {/* Additional shapes for full-width design */}
         <FloatingShape
           type="square"
-          color="text-[#0066ff]"
+          color="text-[#00C2A8]"
           size={55}
-          className="absolute top-[40%] left-[5%] opacity-40"
+          className="absolute top-[40%] left-[5%] opacity-25"
           delay={1.2}
-        />
-        <FloatingShape
-          type="circle"
-          color="text-[#ff6b00]"
-          size={65}
-          className="absolute bottom-[30%] right-[5%] opacity-50"
-          delay={0.3}
         />
       </div>
 
@@ -67,9 +59,9 @@ export default function HeroSection() {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6 }}
-          className="inline-flex items-center gap-2 bg-black text-white px-4 sm:px-6 py-3 rounded-full mb-6 sm:mb-8 border-4 border-white shadow-lg"
+          className="inline-flex items-center gap-2 bg-[#0F1724] text-white px-4 sm:px-6 py-3 rounded-full mb-6 sm:mb-8 shadow-lg"
         >
-          <Sparkles className="w-4 h-4 sm:w-5 sm:h-5" />
+          <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-[#00C2A8]" />
           <span className="font-bold text-xs sm:text-sm tracking-wide">INDIA'S FIRST SOCIALLY VERIFIED BLOCKCHAIN</span>
         </motion.div>
 
@@ -77,80 +69,80 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.2 }}
-          className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-black text-center mb-4 sm:mb-6 text-black leading-[0.9] max-w-7xl"
+          className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-center mb-6 text-[#0F1724] leading-[1.1] max-w-6xl"
         >
-          Built to
+          India's Fastest
           <br />
           <span className="relative inline-block">
-            <span className="relative z-10">Scale</span>
+            <span className="relative z-10">Socially-Verified</span>
             <motion.span
               initial={{ width: 0 }}
               animate={{ width: "100%" }}
               transition={{ duration: 0.8, delay: 0.8 }}
-              className="absolute bottom-1 sm:bottom-2 left-0 h-4 sm:h-6 bg-[#00ffff] -z-10"
+              className="absolute bottom-2 left-0 h-4 sm:h-6 bg-[#00C2A8] opacity-40 -z-10"
             />
           </span>
           <br />
-          Designed to Trust
+          Blockchain
         </motion.h1>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-base sm:text-xl md:text-2xl text-black/80 text-center max-w-2xl lg:max-w-4xl mb-8 sm:mb-12 font-medium px-4"
+          className="text-lg sm:text-xl md:text-2xl text-[#6B7280] text-center max-w-3xl mb-10 font-medium px-4 leading-relaxed"
         >
-          A next-gen Layer 1 blockchain fusing social trust, AI-driven consensus,
-          and real parallel processing for million-TPS performance.
+          Next-gen Layer 1 blockchain combining social trust, AI-driven consensus,
+          and parallel processing for 22M+ TPS performance.
         </motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center w-full max-w-md sm:max-w-none px-4"
+          className="flex flex-col sm:flex-row gap-4 justify-center w-full max-w-md sm:max-w-none px-4"
         >
           <a 
             href="https://testnet.arthachain.online/" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="group bg-black text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg border-4 border-black hover:bg-[#00ffff] hover:text-black transition-all duration-300 shadow-[6px_6px_0px_rgba(0,0,0,0.2)] hover:shadow-[8px_8px_0px_rgba(0,255,255,0.4)] hover:-translate-y-1 flex items-center justify-center gap-2"
+            className="btn-primary flex items-center justify-center gap-2 text-base sm:text-lg px-8 py-4"
           >
-            <Rocket className="w-4 h-4 sm:w-5 sm:h-5" />
+            <Rocket className="w-5 h-5" />
             Join Testnet
           </a>
           <a 
             href="https://docs.arthachain.com/" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="group bg-white text-black px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg border-4 border-black hover:bg-[#ff006e] hover:text-white transition-all duration-300 shadow-[6px_6px_0px_rgba(0,0,0,0.2)] hover:shadow-[8px_8px_0px_rgba(255,0,110,0.4)] hover:-translate-y-1 flex items-center justify-center gap-2"
+            className="btn-secondary flex items-center justify-center gap-2 text-base sm:text-lg px-8 py-4"
           >
-            <Zap className="w-4 h-4 sm:w-5 sm:h-5" />
+            <Zap className="w-5 h-5" />
             Documentation
           </a>
         </motion.div>
 
-        {/* Stats Cards - Full width */}
+        {/* Stats Cards - Brand colors */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mt-12 sm:mt-20 w-full max-w-5xl lg:max-w-6xl px-4"
+          className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-20 w-full max-w-5xl px-4"
         >
           {[
-            { label: "Transactions/sec", value: "22M+", color: "bg-[#00ffff]" },
-            { label: "AI-Powered", value: "SVCP", color: "bg-[#00ff7f]" },
-            { label: "Made in", value: "Bharat", color: "bg-[#ffd500]" },
+            { label: "Transactions/sec", value: "22M+", color: "bg-[#1E4BFF]" },
+            { label: "AI-Powered", value: "SVCP", color: "bg-[#00C2A8]" },
+            { label: "Made in", value: "Bharat", color: "bg-[#0F1724]" },
           ].map((stat, index) => (
             <motion.div
               key={stat.label}
-              whileHover={{ scale: 1.05, rotate: 2 }}
-              className={`${stat.color} rounded-[20px] border-4 border-black p-4 sm:p-6 lg:p-8 text-center shadow-[4px_4px_0px_rgba(0,0,0,0.2)]`}
+              whileHover={{ scale: 1.05, y: -4 }}
+              className={`${stat.color} rounded-2xl p-8 text-center shadow-xl`}
             >
-              <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-black mb-2">
+              <div className="text-5xl sm:text-6xl font-black text-white mb-2">
                 {stat.value}
               </div>
-              <div className="text-xs sm:text-sm md:text-base lg:text-lg font-bold text-black/80">
+              <div className="text-base sm:text-lg font-semibold text-white/90">
                 {stat.label}
               </div>
             </motion.div>

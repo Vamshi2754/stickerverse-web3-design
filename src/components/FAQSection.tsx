@@ -35,7 +35,7 @@ export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="py-16 sm:py-20 md:py-32 bg-[#f5e6d3] relative overflow-hidden w-full">
+    <section className="py-16 sm:py-20 md:py-32 bg-white relative overflow-hidden w-full">
       {/* Geometric Decorations */}
       <motion.div
         animate={{
@@ -46,7 +46,7 @@ export default function FAQSection() {
           duration: 25,
           repeat: Infinity,
         }}
-        className="absolute top-10 right-10 w-20 sm:w-32 h-20 sm:h-32 bg-[#a855f7]/20 rounded-full border-3 sm:border-4 border-black/20"
+        className="absolute top-10 right-10 w-20 sm:w-32 h-20 sm:h-32 bg-[#1E4BFF]/10 rounded-full"
       />
       <motion.div
         animate={{
@@ -56,7 +56,7 @@ export default function FAQSection() {
           duration: 30,
           repeat: Infinity,
         }}
-        className="absolute bottom-10 left-10 w-16 sm:w-24 h-16 sm:h-24 bg-[#00ff7f]/20 border-3 sm:border-4 border-black/20"
+        className="absolute bottom-10 left-10 w-16 sm:w-24 h-16 sm:h-24 bg-[#00C2A8]/10"
         style={{ clipPath: "polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%)" }}
       />
 
@@ -66,17 +66,17 @@ export default function FAQSection() {
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 bg-black text-white px-4 sm:px-6 py-2.5 sm:py-3 rounded-full mb-4 sm:mb-6 border-4 border-white shadow-lg"
+            className="inline-flex items-center gap-2 bg-[#0F1724] text-white px-4 sm:px-6 py-2.5 sm:py-3 rounded-full mb-4 sm:mb-6 shadow-lg"
           >
-            <HelpCircle className="w-4 h-4 sm:w-5 sm:h-5" />
+            <HelpCircle className="w-4 h-4 sm:w-5 sm:h-5 text-[#00C2A8]" />
             <span className="font-bold text-xs sm:text-sm tracking-wide">GOT QUESTIONS?</span>
           </motion.div>
           
-          <h2 className="text-4xl sm:text-5xl md:text-7xl font-black text-black mb-4 sm:mb-6 leading-tight">
+          <h2 className="text-4xl sm:text-5xl md:text-7xl font-black text-[#0F1724] mb-4 sm:mb-6 leading-tight">
             Frequently Asked
             <br className="sm:hidden" /> Questions
           </h2>
-          <p className="text-base sm:text-xl md:text-2xl text-black/70 max-w-3xl mx-auto font-medium px-4">
+          <p className="text-base sm:text-xl md:text-2xl text-[#6B7280] max-w-3xl mx-auto font-medium px-4">
             Everything you need to know about Arthachain
           </p>
         </div>
@@ -90,22 +90,21 @@ export default function FAQSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className={`
-                bg-white rounded-[20px] border-3 sm:border-4 border-black
-                shadow-[4px_4px_0px_rgba(0,0,0,0.1)]
+                bg-[#F7F9FC] rounded-2xl shadow-md hover:shadow-lg
                 overflow-hidden
                 transition-all duration-200
-                ${openIndex === index ? "shadow-[8px_8px_0px_rgba(0,0,0,0.15)]" : ""}
               `}
             >
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className="w-full flex items-start sm:items-center justify-between p-5 sm:p-6 md:p-8 text-left hover:bg-black/5 transition-colors"
+                className="w-full flex items-start sm:items-center justify-between p-5 sm:p-6 md:p-8 text-left hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-[#1E4BFF] focus:ring-inset"
+                aria-expanded={openIndex === index}
               >
-                <span className="text-base sm:text-lg md:text-xl font-black text-black pr-4 leading-tight">
+                <span className="text-base sm:text-lg md:text-xl font-black text-[#0F1724] pr-4 leading-tight">
                   {faq.question}
                 </span>
                 <div className={`
-                  flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-black text-white flex items-center justify-center
+                  flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[#1E4BFF] text-white flex items-center justify-center
                   transition-transform duration-200
                   ${openIndex === index ? "rotate-180" : ""}
                 `}>
@@ -127,8 +126,8 @@ export default function FAQSection() {
                     className="overflow-hidden"
                   >
                     <div className="px-5 sm:px-6 md:px-8 pb-5 sm:pb-6 md:pb-8 pt-0">
-                      <div className="border-t-2 border-black/10 pt-4 sm:pt-5">
-                        <p className="text-sm sm:text-base md:text-lg text-black/70 font-medium leading-relaxed">
+                      <div className="border-t-2 border-gray-200 pt-4 sm:pt-5">
+                        <p className="text-sm sm:text-base md:text-lg text-[#6B7280] font-medium leading-relaxed">
                           {faq.answer}
                         </p>
                       </div>
@@ -147,16 +146,16 @@ export default function FAQSection() {
           viewport={{ once: true }}
           className="mt-12 sm:mt-16 text-center"
         >
-          <div className="bg-gradient-to-r from-[#00ffff] to-[#00ff7f] rounded-[24px] border-4 border-black shadow-[6px_6px_0px_rgba(0,0,0,0.1)] p-6 sm:p-8 md:p-10 max-w-3xl mx-auto">
-            <h3 className="text-2xl sm:text-3xl md:text-4xl font-black text-black mb-3 sm:mb-4">
+          <div className="bg-gradient-to-r from-[#1E4BFF] to-[#00C2A8] rounded-2xl shadow-xl p-6 sm:p-8 md:p-10 max-w-3xl mx-auto">
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-black text-white mb-3 sm:mb-4">
               Still have questions?
             </h3>
-            <p className="text-sm sm:text-base md:text-lg text-black/80 font-medium mb-5 sm:mb-6 px-4">
+            <p className="text-sm sm:text-base md:text-lg text-white/90 font-medium mb-5 sm:mb-6 px-4">
               Our team is here to help you get started with Arthachain
             </p>
             <a
               href="/contact"
-              className="inline-block bg-black text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-sm sm:text-base md:text-lg border-4 border-white hover:bg-white hover:text-black hover:border-black transition-all duration-300 shadow-lg hover:-translate-y-1"
+              className="inline-block btn-secondary !bg-white !text-[#1E4BFF] !border-white hover:!bg-white/90 px-8 py-4 text-base font-bold"
             >
               Contact Support
             </a>
