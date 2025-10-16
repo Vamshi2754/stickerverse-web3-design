@@ -20,27 +20,29 @@ export default function StickerCard({
 }: StickerCardProps) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20, scale: 0.95 }}
+      initial={{ opacity: 0, y: 30, scale: 0.95 }}
       whileInView={{ opacity: 1, y: 0, scale: 1 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{
-        duration: 0.5,
+        duration: 0.6,
         delay,
         ease: [0.25, 0.46, 0.45, 0.94],
       }}
       whileHover={{
-        y: -8,
-        scale: 1.02,
-        boxShadow: "12px 12px 0px rgba(0, 0, 0, 0.15)",
-        transition: { duration: 0.2 },
+        y: -10,
+        scale: 1.03,
+        rotate: 2,
+        boxShadow: "16px 16px 0px rgba(0, 0, 0, 0.2)",
+        transition: { duration: 0.25, ease: "easeOut" },
       }}
       className={`
         ${bgColor} ${borderColor}
-        rounded-[24px] border-4 
-        shadow-[6px_6px_0px_rgba(0,0,0,0.1)]
-        p-6 md:p-8
+        rounded-[28px] border-4 
+        shadow-[8px_8px_0px_rgba(0,0,0,0.15)]
+        p-7 md:p-9
         transition-all duration-200
         texture-noise
+        cursor-pointer
         ${className}
       `}
     >
