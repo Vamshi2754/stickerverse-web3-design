@@ -51,7 +51,7 @@ const features = [
 
 export default function FeaturesSection() {
   return (
-    <section className="py-20 sm:py-24 md:py-32 bg-white relative overflow-hidden w-full">
+    <section className="py-20 sm:py-24 md:py-32 bg-[#c7f5e8] relative overflow-hidden w-full">
       {/* Background Pattern */}
       <div className="absolute inset-0 pattern-dots opacity-5" />
       

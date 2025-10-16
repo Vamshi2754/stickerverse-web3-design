@@ -45,7 +45,7 @@ const partners = [
 
 export default function PartnersSection() {
   return (
-    <section className="py-20 sm:py-24 md:py-32 bg-white relative overflow-hidden w-full">
+    <section className="py-20 sm:py-24 md:py-32 bg-[#ffd4c4] relative overflow-hidden w-full">
       {/* Background Pattern */}
       <div className="absolute inset-0 pattern-dots opacity-5" />
       
